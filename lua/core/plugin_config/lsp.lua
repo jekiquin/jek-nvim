@@ -13,6 +13,17 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+local cmp = require('cmp')
+local cmp_action = lsp_zero.cmp_action()
+
+cmp.setup({
+  mapping = {
+    ['<Tab>'] = cmp_action.tab_complete(),
+    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+  }
+})
+
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
