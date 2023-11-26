@@ -40,7 +40,10 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},
     }
   }
-  
+
+  use('neovim/nvim-lspconfig')
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
