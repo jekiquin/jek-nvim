@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",

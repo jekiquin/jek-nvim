@@ -44,7 +44,6 @@ return require('packer').startup(function(use)
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
-
   use 'tpope/vim-fugitive'
 
   use({
@@ -53,7 +52,7 @@ return require('packer').startup(function(use)
   })
 
   use {'numToStr/Comment.nvim'}
-
+  use {'lewis6991/gitsigns.nvim'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
