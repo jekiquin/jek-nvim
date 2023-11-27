@@ -48,6 +48,6 @@ prettier.setup({
     trailing_comma = "es5",
     use_tabs = false,
     vue_indent_script_and_style = false,
-    config_precedence = "file-override"
+    config_precedence = "prefer-file"
   },
 })
