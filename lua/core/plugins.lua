@@ -45,7 +45,17 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
 
-  use('https://tpope.io/vim/fugitive.git')
+  use 'tpope/vim-fugitive'
+
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

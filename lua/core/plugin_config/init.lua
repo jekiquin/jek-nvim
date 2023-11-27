@@ -6,4 +6,5 @@ require("core.plugin_config.treesitter")
 require("core.plugin_config.lsp")
 require("core.plugin_config.null-ls")
 require("core.plugin_config.prettier")
+require("core.plugin_config.fugitive")
 
