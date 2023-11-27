@@ -7,4 +7,6 @@ require("core.plugin_config.lsp")
 require("core.plugin_config.null-ls")
 require("core.plugin_config.prettier")
 require("core.plugin_config.fugitive")
+require("core.plugin_config.comment")
+require("core.plugin_config.nvim-surround")
 
