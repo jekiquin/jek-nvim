@@ -18,6 +18,10 @@ require("nvim-tree").setup {
   view = {
     width = 50,
   },
+  filters = {
+    dotfiles = false,
+    custom = {'^.git$'}
+  },
  on_attach = my_on_attach,
 }
 
