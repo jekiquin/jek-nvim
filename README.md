@@ -19,3 +19,4 @@
     1. typescript
     2. typescript-server-language
     3. pyright - if you're using python
+    4. @johnnymorganz/stylua-bin - for lua

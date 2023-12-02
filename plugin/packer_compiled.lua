@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
@@ -154,6 +149,13 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-textobjects"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
@@ -174,6 +176,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["stylua-nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\stylua-nvim",
+    url = "https://github.com/ckipp01/stylua-nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
@@ -187,6 +194,11 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-treesitter-textobjects ]]
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

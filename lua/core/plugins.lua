@@ -1,62 +1,68 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'ellisonleao/gruvbox.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lualine/lualine.nvim'
-  use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+return require("packer").startup(function(use)
+	use("wbthomason/packer.nvim")
+	use("ellisonleao/gruvbox.nvim")
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+	use("nvim-lualine/lualine.nvim")
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
-    requires = {
-      --- Uncomment these if you want to manage LSP servers from neovim
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v3.x",
+		requires = {
+			--- Uncomment these if you want to manage LSP servers from neovim
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
 
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'L3MON4D3/LuaSnip'},
-    }
-  }
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" },
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "L3MON4D3/LuaSnip" },
+		},
+	})
 
-  use('neovim/nvim-lspconfig')
-  use('jose-elias-alvarez/null-ls.nvim')
-  use('MunifTanjim/prettier.nvim')
-  use 'tpope/vim-fugitive'
+	use("neovim/nvim-lspconfig")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("MunifTanjim/prettier.nvim")
+	use("tpope/vim-fugitive")
 
-  use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-  })
+	use({
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+	})
 
-  use {'numToStr/Comment.nvim'}
-  use {'lewis6991/gitsigns.nvim'}
+	use({ "numToStr/Comment.nvim" })
+	use({ "lewis6991/gitsigns.nvim" })
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+	use({ "ckipp01/stylua-nvim", run = "npm install -g @johnnymorganz/stylua-bin" })
+	use({
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)
