@@ -15,6 +15,9 @@ end
 
 -- pass to setup along with your other options
 require("nvim-tree").setup {
+  git = {
+    timeout = 4000
+  },
   view = {
     width = 50,
   },
