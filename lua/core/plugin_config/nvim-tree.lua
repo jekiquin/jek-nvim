@@ -16,7 +16,8 @@ end
 -- pass to setup along with your other options
 require("nvim-tree").setup {
   git = {
-    timeout = 4000
+    timeout = 4000,
+    enable = true
   },
   view = {
     width = 50,
@@ -29,6 +30,14 @@ require("nvim-tree").setup {
     ignore = false,
   },
   on_attach = my_on_attach,
+  renderer = {
+    highlight_git = true,
+    icons = {
+      show = {
+        git = true
+      }
+    }
+  }
 }
 
 vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')
