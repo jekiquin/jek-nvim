@@ -17,7 +17,8 @@ end
 require("nvim-tree").setup {
   git = {
     timeout = 4000,
-    enable = true
+    enable = true,
+    ignore = false,
   },
   view = {
     width = 50,
@@ -25,9 +26,6 @@ require("nvim-tree").setup {
   filters = {
     dotfiles = false,
     custom = {'^.git$'}
-  },
-  git = {
-    ignore = false,
   },
   on_attach = my_on_attach,
   renderer = {
