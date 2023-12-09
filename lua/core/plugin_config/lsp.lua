@@ -18,10 +18,19 @@ local cmp = require("cmp")
 local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
-	mapping = {
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+
+	mapping = cmp.mapping.preset.insert({
 		["<Tab>"] = cmp_action.tab_complete(),
 		["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
-	},
+
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<C-u>"] = cmp.mapping.scroll_docs(-4),
+		["<C-d>"] = cmp.mapping.scroll_docs(4),
+	}),
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
