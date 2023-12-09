@@ -8,7 +8,7 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "eslint", "pyright" },
+	ensure_installed = { "tsserver", "eslint", "pyright", "yamlls" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
