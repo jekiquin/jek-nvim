@@ -48,6 +48,11 @@ return require("packer").startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	use({
+		"smoka7/hop.nvim",
+		tag = "*", -- optional but strongly recommended
+	})
+
+	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
 	})
