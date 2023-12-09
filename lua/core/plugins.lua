@@ -21,7 +21,11 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" }, { "debugloop/telescope-undo.nvim" } },
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "debugloop/telescope-undo.nvim" },
+			{ "nvim-telescope/telescope-live-grep-args.nvim" },
+		},
 	})
 
 	use({
@@ -66,6 +70,7 @@ return require("packer").startup(function(use)
 		after = "nvim-treesitter",
 		requires = "nvim-treesitter/nvim-treesitter",
 	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
