@@ -16,12 +16,13 @@ end
 -- pass to setup along with your other options
 require("nvim-tree").setup {
   git = {
-    timeout = 4000,
-    enable = true,
-    ignore = false,
+    enable = false,
+    ignore = true,
   },
   view = {
     width = 50,
+    adaptive_size = false,
+    preserve_window_proportions = true,
   },
   filters = {
     dotfiles = false,
