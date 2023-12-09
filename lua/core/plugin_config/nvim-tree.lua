@@ -28,6 +28,12 @@ require("nvim-tree").setup {
     dotfiles = false,
     custom = {'^.git$'}
   },
+  sync_root_with_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_root = false,
+    ignore_list = {}
+  },
   on_attach = my_on_attach,
   renderer = {
     highlight_git = true,
