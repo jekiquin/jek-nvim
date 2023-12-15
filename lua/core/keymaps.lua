@@ -18,7 +18,6 @@ vim.cmd [[
 ]]
 
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<Esc>:update<CR>', {noremap = true, silent = true})
-vim.keymap.set('n', '<leader>sq', ':wq<CR>')
-vim.keymap.set('n', '<leader>qq', ':q<CR>')
+vim.keymap.set('n', '<leader>qa', ':q<CR>')
 vim.keymap.set('n', '<leader>h', '^', {noremap = true})
 vim.keymap.set('n', '<leader>l', '$', {noremap = true})
