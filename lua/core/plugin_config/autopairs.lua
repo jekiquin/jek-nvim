@@ -43,3 +43,4 @@ autopairs.setup({
 	enable_check_bracket_line = true,
 	ignore_next_char = "[%W%.]",
 })
+
