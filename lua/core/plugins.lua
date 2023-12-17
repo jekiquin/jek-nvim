@@ -72,6 +72,7 @@ return require("packer").startup(function(use)
 	})
 
 	use("chentoast/marks.nvim")
+  use("windwp/nvim-autopairs")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

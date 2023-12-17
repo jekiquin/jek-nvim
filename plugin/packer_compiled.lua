@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
@@ -99,6 +104,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\hop.nvim",
+    url = "https://github.com/smoka7/hop.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
@@ -108,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\marks.nvim",
+    url = "https://github.com/chentoast/marks.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -180,6 +195,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\stylua-nvim",
     url = "https://github.com/ckipp01/stylua-nvim"
+  },
+  ["telescope-live-grep-args.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-live-grep-args.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
+  },
+  ["telescope-undo.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-undo.nvim",
+    url = "https://github.com/debugloop/telescope-undo.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
