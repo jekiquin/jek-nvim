@@ -72,8 +72,16 @@ return require("packer").startup(function(use)
 	})
 
 	use("chentoast/marks.nvim")
-  use("windwp/nvim-autopairs")
+	use("windwp/nvim-autopairs")
 
+	use({
+		"rmagatti/auto-session",
+		config = function()
+			require("auto-session").setup({
+				log_level = "error",
+			})
+		end,
+	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
