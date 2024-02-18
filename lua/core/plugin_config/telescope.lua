@@ -1,8 +1,12 @@
 local builtin = require("telescope.builtin")
 local telescope = require("telescope")
+local live_grep_args = telescope.extensions.live_grep_args
+local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
+vim.keymap.set("n", "<leader>fg", live_grep_args.live_grep_args, {})
+vim.keymap.set("n", "<leader>fc", function() live_grep_args_shortcuts.grep_word_under_cursor({postfix = ""}) end, {})
+vim.keymap.set("v", "<leader>fc", function() live_grep_args_shortcuts.grep_visual_selection({postfix = ""}) end, {})
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<leader>ps", function()
