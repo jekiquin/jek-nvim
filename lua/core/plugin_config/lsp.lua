@@ -18,10 +18,10 @@ local cmp = require("cmp")
 local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  },
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 
 	mapping = cmp.mapping.preset.insert({
 		["<Tab>"] = cmp_action.tab_complete(),
@@ -61,4 +61,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 	end,
+})
+
+vim.diagnostic.config({
+	virtual_text = true,
+	update_in_insert = true,
 })
