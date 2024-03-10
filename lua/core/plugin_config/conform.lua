@@ -1,4 +1,5 @@
 local conform = require("conform")
+
 local format_config = {
 	lsp_fallback = true,
 	timeout_ms = 500,

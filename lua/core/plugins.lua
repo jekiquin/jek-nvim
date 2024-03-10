@@ -18,7 +18,7 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-  use("nvim-treesitter/nvim-treesitter-context")
+	use("nvim-treesitter/nvim-treesitter-context")
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.5",
@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
 			--- Uncomment these if you want to manage LSP servers from neovim
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
+			{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
@@ -47,7 +48,7 @@ return require("packer").startup(function(use)
 	})
 
 	use("neovim/nvim-lspconfig")
-  use("stevearc/conform.nvim")
+	use("stevearc/conform.nvim")
 	use("tpope/vim-fugitive")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 

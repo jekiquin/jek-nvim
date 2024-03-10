@@ -13,6 +13,15 @@ require("mason-lspconfig").setup({
 		lsp_zero.default_setup,
 	},
 })
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		"prettier",
+		"prettierd",
+		"stylua",
+		"isort",
+		"black",
+	},
+})
 
 local cmp = require("cmp")
 local cmp_action = lsp_zero.cmp_action()
