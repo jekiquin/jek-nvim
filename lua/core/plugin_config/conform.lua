@@ -22,7 +22,6 @@ conform.setup({
 		yaml = { { "prettierd", "prettier" } },
 		markdown = { { "prettierd", "prettier" } },
 		["markdown.mdx"] = { { "prettierd", "prettier" } },
-		graphql = { { "prettierd", "prettier" } },
 		handlebars = { { "prettierd", "prettier" } },
 		graphql = { { "prettierd", "prettier" } },
 		python = { "isort", "black" },
@@ -36,7 +35,7 @@ vim.keymap.set({ "n", "v" }, "<leader>f", function()
 end)
 
 vim.api.nvim_create_user_command("UpdateAndFormat", function()
-	local_format_config = format_config
+	local local_format_config = format_config
 	local_format_config.bufnr = vim.api.nvim_get_current_buf()
 	conform.format(local_format_config)
 	vim.cmd("update")
