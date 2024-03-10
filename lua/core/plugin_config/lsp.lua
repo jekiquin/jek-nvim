@@ -1,18 +1,11 @@
 local lsp_zero = require("lsp-zero")
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
 	-- see :help lsp-zero-keybindings
 	-- to learn the available actions
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
-require("mason").setup({})
-require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "eslint", "pyright", "yamlls", "lua_ls" },
-	handlers = {
-		lsp_zero.default_setup,
-	},
-})
 require("mason-tool-installer").setup({
 	ensure_installed = {
 		"prettier",
@@ -20,6 +13,20 @@ require("mason-tool-installer").setup({
 		"stylua",
 		"isort",
 		"black",
+		"eslint_d",
+		"flake8",
+		"selene",
+	},
+})
+require("mason").setup({})
+require("mason-lspconfig").setup({
+	ensure_installed = { "tsserver", "eslint", "pyright", "yamlls" },
+	handlers = {
+		lsp_zero.default_setup,
+		lua_ls = function()
+			local lua_opts = lsp_zero.nvim_lua_ls()
+			require("lspconfig").lua_ls.setup(lua_opts)
+		end,
 	},
 })
 
