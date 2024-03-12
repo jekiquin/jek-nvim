@@ -30,15 +30,15 @@ conform.setup({
 	format_on_save = format_config,
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>f", function()
-	conform.format(format_config)
-end)
-
-vim.api.nvim_create_user_command("UpdateAndFormat", function()
+local formatFunction = function()
 	local local_format_config = format_config
 	local_format_config.bufnr = vim.api.nvim_get_current_buf()
 	conform.format(local_format_config)
 	vim.cmd("update")
-end, {})
+end
+
+vim.keymap.set({ "n", "v" }, "<leader>f", formatFunction)
+
+vim.api.nvim_create_user_command("UpdateAndFormat", formatFunction, {})
 
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Esc>:UpdateAndFormat<CR>", { noremap = true, silent = true })
