@@ -11,8 +11,8 @@ require("lualine").setup({
 				path = 1,
 			},
 		},
-    lualine_c = {
-      auto_session_library.current_session_name
-    }
+		lualine_c = {
+			auto_session_library.current_session_name,
+		},
 	},
 })
