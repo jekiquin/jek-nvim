@@ -1,4 +1,5 @@
 local lsp_zero = require("lsp-zero")
+local actions_preview = require("actions-preview")
 
 lsp_zero.on_attach(function(_, bufnr)
 	-- see :help lsp-zero-keybindings
@@ -20,7 +21,7 @@ require("mason-tool-installer").setup({
 })
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "eslint", "pyright", "yamlls" },
+	ensure_installed = { "tsserver", "pyright", "yamlls" },
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
@@ -74,11 +75,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 		vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-		vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+		vim.keymap.set({ "n", "v" }, "<leader>ca", actions_preview.code_actions, opts)
+		-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 	end,
 })
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
+	severity_sort = true,
 })
