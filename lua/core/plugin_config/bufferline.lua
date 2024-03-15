@@ -1,10 +1,10 @@
 vim.opt.termguicolors = true
 
-vim.keymap.set("n", "<leader>bl", ":BufferLinePick<CR>")
-vim.keymap.set("n", "<leader>cbl", ":BufferLineCloseOthers<CR>")
+vim.keymap.set("n", "<leader>bl", "<cmd>BufferLinePick<CR>")
+vim.keymap.set("n", "<leader>cbl", "<cmd>BufferLineCloseOthers<CR>")
 vim.keymap.set("n", "<leader>bq", "<CMD> bp <BAR> bd #<CR>")
-vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>")
 
 require("bufferline").setup({
 	options = {
