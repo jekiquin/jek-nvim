@@ -17,6 +17,7 @@ vim.cmd([[
  autocmd InsertLeave * silent! update
 ]])
 
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Esc><cmd>update<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>qa", ":q<CR>")
 vim.keymap.set("n", "<leader>h", "^", { noremap = true })
 vim.keymap.set("n", "<leader>l", "$", { noremap = true })

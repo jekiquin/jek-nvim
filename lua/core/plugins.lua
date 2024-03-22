@@ -48,8 +48,7 @@ return require("packer").startup(function(use)
 	})
 
 	use("neovim/nvim-lspconfig")
-	use("stevearc/conform.nvim")
-	use("mfussenegger/nvim-lint")
+	use("jose-elias-alvarez/null-ls.nvim")
 	use("tpope/vim-fugitive")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 

@@ -12,9 +12,6 @@ require("mason-tool-installer").setup({
 		"prettierd",
 		"stylua",
 		"black",
-		"eslint_d",
-		"flake8",
-		"selene",
 	},
 })
 require("mason").setup({})
