@@ -2,7 +2,8 @@ local null_ls = require("null-ls")
 
 local sources = {
   null_ls.builtins.formatting.prettierd,
-  null_ls.builtins.formatting.stylua
+  null_ls.builtins.formatting.stylua,
+  null_ls.builtins.diagnostics.eslint_d
 }
 local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
 local event = "BufWritePre" -- or "BufWritePost"

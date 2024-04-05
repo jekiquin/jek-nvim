@@ -11,7 +11,7 @@ require("mason-tool-installer").setup({
 	ensure_installed = {
 		"prettierd",
 		"stylua",
-		"black",
+    "eslint_d"
 	},
 })
 require("mason").setup({})
