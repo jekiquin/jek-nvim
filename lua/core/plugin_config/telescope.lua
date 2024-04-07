@@ -2,7 +2,7 @@ local builtin = require("telescope.builtin")
 local telescope = require("telescope")
 local live_grep_args = telescope.extensions.live_grep_args
 local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
-local undo_actions = require("telescope-undo.actions");
+local undo_actions = require("telescope-undo.actions")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", live_grep_args.live_grep_args, {})
@@ -15,6 +15,9 @@ end, {})
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<leader>fig", builtin.current_buffer_fuzzy_find, {})
+vim.keymap.set({ "n", "v" }, "<leader>el", function()
+	builtin.diagnostics({ bufnr = 0 })
+end, {})
 
 -- git
 vim.keymap.set("n", "<Leader>gb", "<cmd>Telescope git_branches<CR>", { noremap = true, silent = true })
@@ -54,4 +57,6 @@ telescope.setup({
 		},
 	},
 })
+
 telescope.load_extension("undo")
+telescope.load_extension("bookmarks")

@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
 			{ "nvim-telescope/telescope-live-grep-args.nvim" },
 		},
 	})
+	use({ "tomasky/bookmarks.nvim", after = "telescope.nvim" })
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
