@@ -2,6 +2,7 @@ local builtin = require("telescope.builtin")
 local telescope = require("telescope")
 local live_grep_args = telescope.extensions.live_grep_args
 local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+local undo_actions = require("telescope-undo.actions");
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", live_grep_args.live_grep_args, {})
@@ -13,9 +14,7 @@ vim.keymap.set("v", "<leader>fc", function()
 end, {})
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
-vim.keymap.set("n", "<leader>ps", function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
+vim.keymap.set("n", "<leader>fig", builtin.current_buffer_fuzzy_find, {})
 
 -- git
 vim.keymap.set("n", "<Leader>gb", "<cmd>Telescope git_branches<CR>", { noremap = true, silent = true })
@@ -38,17 +37,17 @@ telescope.setup({
 				},
 				mappings = {
 					i = {
-						["<cr>"] = require("telescope-undo.actions").yank_additions,
-						["<S-cr>"] = require("telescope-undo.actions").yank_deletions,
-						["<C-cr>"] = require("telescope-undo.actions").restore,
+						["<cr>"] = undo_actions.yank_additions,
+						["<S-cr>"] = undo_actions.yank_deletions,
+						["<C-cr>"] = undo_actions.restore,
 						-- alternative defaults, for users whose terminals do questionable things with modified <cr>
-						["<C-y>"] = require("telescope-undo.actions").yank_deletions,
-						["<C-r>"] = require("telescope-undo.actions").restore,
+						["<C-y>"] = undo_actions.yank_deletions,
+						["<C-r>"] = undo_actions.restore,
 					},
 					n = {
-						["y"] = require("telescope-undo.actions").yank_additions,
-						["Y"] = require("telescope-undo.actions").yank_deletions,
-						["u"] = require("telescope-undo.actions").restore,
+						["y"] = undo_actions.yank_additions,
+						["Y"] = undo_actions.yank_deletions,
+						["u"] = undo_actions.restore,
 					},
 				},
 			},
