@@ -1,4 +1,4 @@
-local bm = require('bookmarks')
+local bm = require("bookmarks")
 bm.setup({
 	-- sign_priority = 8,  --set bookmark sign priority to cover other sign
 	save_file = vim.fn.expand("$HOME/.bookmarks"), -- bookmarks save file path
@@ -15,8 +15,8 @@ bm.setup({
 		map("n", "mc", bm.bookmark_clean) -- clean all marks in local buffer
 		map("n", "mn", bm.bookmark_next) -- jump to next mark in local buffer
 		map("n", "mp", bm.bookmark_prev) -- jump to previous mark in local buffer
-		map("n", "ml", function() 
-      require("telescope").extensions.bookmarks.list()
-    end) -- show marked file list in quickfix window
+		map("n", "ml", function()
+			require("telescope").extensions.bookmarks.list()
+		end) -- show marked file list in quickfix window
 	end,
 })

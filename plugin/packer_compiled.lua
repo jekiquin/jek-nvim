@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-session",
     url = "https://github.com/rmagatti/auto-session"
   },
+  ["bookmarks.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bookmarks.nvim",
+    url = "https://github.com/tomasky/bookmarks.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
@@ -104,11 +109,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["conform.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\conform.nvim",
-    url = "https://github.com/stevearc/conform.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -155,6 +155,21 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["noice.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
@@ -165,15 +180,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-lint"] = {
-    loaded = true,
-    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lint",
-    url = "https://github.com/mfussenegger/nvim-lint"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "C:\\Users\\jeric\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-surround"] = {
     loaded = true,
