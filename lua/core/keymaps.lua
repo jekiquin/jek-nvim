@@ -21,3 +21,6 @@ vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Esc><cmd>update<CR>", { noremap = t
 vim.keymap.set("n", "<leader>qa", ":q<CR>")
 vim.keymap.set("n", "<leader>h", "^", { noremap = true })
 vim.keymap.set("n", "<leader>l", "$", { noremap = true })
+
+-- terminal on buffer
+vim.keymap.set({ "n", "v" }, "<leader>to", "<Esc><cmd>term<CR>", { noremap = true })
