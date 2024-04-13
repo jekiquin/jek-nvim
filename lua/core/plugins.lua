@@ -25,10 +25,10 @@ return require("packer").startup(function(use)
 		requires = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "debugloop/telescope-undo.nvim" },
+			{ "tomasky/bookmarks.nvim" },
 			{ "nvim-telescope/telescope-live-grep-args.nvim" },
 		},
 	})
-	use({ "tomasky/bookmarks.nvim", after = "nvim-telescope/telescope.nvim" })
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
