@@ -16,7 +16,7 @@ require("mason-tool-installer").setup({
 })
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "pyright", "yamlls" },
+	ensure_installed = { "tsserver", "pyright", "yamlls", "lua_ls" },
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
