@@ -11,12 +11,13 @@ require("mason-tool-installer").setup({
 	ensure_installed = {
 		"prettierd",
 		"stylua",
-    "eslint_d"
+    "eslint"
 	},
 })
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "pyright", "yamlls", "lua_ls" },
+  -- eslint 4.8.0
+	ensure_installed = { "tsserver", "pyright", "yamlls", "lua_ls", "eslint" },
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
