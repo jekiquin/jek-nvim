@@ -49,7 +49,7 @@ return require("packer").startup(function(use)
 	})
 
 	use("neovim/nvim-lspconfig")
-  use("stevearc/conform.nvim")
+	use("stevearc/conform.nvim")
 	use("tpope/vim-fugitive")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
@@ -90,6 +90,8 @@ return require("packer").startup(function(use)
 		"folke/noice.nvim",
 		requires = { { "MunifTanjim/nui.nvim" }, { "rcarriga/nvim-notify" } },
 	})
+
+	use({ "windwp/nvim-ts-autotag", requires = { "nvim-treesitter/nvim-treesitter" } })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
