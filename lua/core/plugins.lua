@@ -76,14 +76,7 @@ return require("packer").startup(function(use)
 	use("chentoast/marks.nvim")
 	use("windwp/nvim-autopairs")
 
-	use({
-		"rmagatti/auto-session",
-		config = function()
-			require("auto-session").setup({
-				log_level = "error",
-			})
-		end,
-	})
+	use("rmagatti/auto-session")
 
 	use({ "aznhe21/actions-preview.nvim" })
 	use({
