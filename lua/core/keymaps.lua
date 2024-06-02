@@ -23,4 +23,9 @@ vim.keymap.set("n", "<leader>h", "^", { noremap = true })
 vim.keymap.set("n", "<leader>l", "$", { noremap = true })
 
 -- terminal on buffer
-vim.keymap.set({ "n", "v" }, "<leader>to", "<Esc><cmd>term<CR>", { noremap = true })
+vim.keymap.set({ "n", "v" }, "<leader>tov", function()
+	vim.cmd("vsplit term://" .. vim.o.shell)
+end, { noremap = true })
+vim.keymap.set({ "n", "v" }, "<leader>toh", function()
+	vim.cmd("split term://" .. vim.o.shell)
+end, { noremap = true })
