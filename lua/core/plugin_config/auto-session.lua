@@ -3,7 +3,7 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 require("auto-session").setup {
   log_level = "error",
   bypass_session_save_file_types = nil,
-  auto_restore_enabled = false,
+  auto_restore_enabled = true,
   auto_save_enabled = true,
   cwd_change_handling = {
     restore_upcoming_session = true, -- already the default, no need to specify like this, only here as an example
