@@ -49,6 +49,12 @@ return require("packer").startup(function(use)
 	})
 
 	use("neovim/nvim-lspconfig")
+
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	})
+
 	use("stevearc/conform.nvim")
 	use("tpope/vim-fugitive")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
