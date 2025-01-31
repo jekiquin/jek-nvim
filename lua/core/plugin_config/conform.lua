@@ -19,6 +19,7 @@ conform.setup({
 		["markdown.mdx"] = { "prettier", "prettierd" },
 		graphql = { "prettier", "prettierd" },
 		handlebars = { "prettier", "prettierd" },
+		rust = { "rustfmt" },
 	},
 })
 
