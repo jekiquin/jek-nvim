@@ -90,7 +90,7 @@ return require("packer").startup(function(use)
 		requires = { { "MunifTanjim/nui.nvim" }, { "rcarriga/nvim-notify" } },
 	})
 
-	use({ "windwp/nvim-ts-autotag", requires = { "nvim-treesitter/nvim-treesitter" } })
+	use("windwp/nvim-ts-autotag")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
